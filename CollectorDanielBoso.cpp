@@ -1,6 +1,6 @@
 
 
-#include "CollectorDanielBoso_if.h"
+#include "CollectorDanielBoso.h"
 
 CollectorDanielBoso::CollectorDanielBoso() {}
 
