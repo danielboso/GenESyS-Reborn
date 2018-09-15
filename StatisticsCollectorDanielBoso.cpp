@@ -1,5 +1,8 @@
 
 #include "StatisticsCollectorDanielBoso.h"
+#include "fstream";
+
+std::list<std::string>* _words;
 
 StatisticsCollectorDanielBoso::StatisticsCollectorDanielBoso() : ModelInfrastructure(typeid (this).name()) {}
 
@@ -15,7 +18,9 @@ std::string StatisticsCollectorDanielBoso::show() {
 	return ModelInfrastructure::show();
 }
 
-void StatisticsCollectorDanielBoso::_loadInstance(std::list<std::string> words) {}
+void StatisticsCollectorDanielBoso::_loadInstance(std::list<std::string> words) {
+    _words = &words;
+}
 
 std::list<std::string>* StatisticsCollectorDanielBoso::_saveInstance() {
 	std::list<std::string>* words = new std::list<std::string>();
