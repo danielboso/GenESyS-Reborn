@@ -1,5 +1,5 @@
-#ifndef SAMPLERMYIMPL1_H
-#define SAMPLERMYIMPL1_H
+#ifndef SAMPLERDANIELBOSO_H
+#define SAMPLERDANIELBOSO_H
 
 #include "Sampler_if.h"
 
@@ -35,4 +35,4 @@ private:
 	MyRNG_Parameters* _param = new MyRNG_Parameters();
 };
 
-#endif /* SAMPLERMYIMPL1_H */
+#endif /* SAMPLERDANIELBOSO_H */
