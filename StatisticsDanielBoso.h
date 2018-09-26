@@ -3,9 +3,7 @@
 #define STATISTICSDANIELBOSO_H
 
 #include "Statistics_if.h"
-#include "CollectorDanielBoso.h"
-//#include "Collector_if.h"
-//#include "Traits.h"
+#include "CollectorDatafileDanielBoso.h"
 
 class StatisticsDanielBoso : public Statistics_if {
 public:
@@ -13,8 +11,8 @@ public:
 	StatisticsDanielBoso(const StatisticsDanielBoso& orig);
 	virtual ~StatisticsDanielBoso();
 public:
-	Collector_if* getCollector();
-	void setCollector(Collector_if* collector);
+	CollectorDatafileDanielBoso* getCollector();
+	void setCollector(CollectorDatafileDanielBoso* collector);
 public:
 	unsigned int numElements();
 	double min();
@@ -35,10 +33,8 @@ public:
 	double histogramClassLowerLimit(unsigned short classNum);
 	unsigned int histogramClassFrequency(unsigned short classNum);
 private:
-	Collector_if* _collector = new CollectorDanielBoso();
-	/* TODO:  WTF? Why the next lines do not compile? */
-	//Collector_if* _collector = new Traits<ModelComponent>::CollectorImplementation();
-	//Collector_if* _collector = new Traits<Collector_if>::ModelImplementation();
+	CollectorDatafileDanielBoso* _collector = new CollectorDatafileDanielBoso();
+	unsigned short _histogramNumClasses;
 
 };
 
