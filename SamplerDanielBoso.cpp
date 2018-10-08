@@ -12,6 +12,8 @@ unsigned long _multiplier 	=  950706376;
 unsigned long _module 		= 2147483647;
 bool		  _normalFlag	= true;
 
+Sampler_if::RNG_Parameters *_param;
+
 struct ClassInformation{
 		double id;
 		double begin;
@@ -193,10 +195,10 @@ double SamplerDanielBoso::sampleDiscrete(int count, ...) {
     va_end(numbers);
 }
 
-void SamplerDanielBoso::setRNGparameters(Sampler_if::RNG_Parameters* param){
-	_param =  param;
+void SamplerDanielBoso::setRNGparameters(SamplerDanielBoso::RNG_Parameters* param){
+	_param = param;
 }
 
-Sampler_if::RNG_Parameters* SamplerDanielBoso::getRNGparameters() const {
+SamplerDanielBoso::RNG_Parameters* SamplerDanielBoso::getRNGparameters() const {
 	return _param; 
 }

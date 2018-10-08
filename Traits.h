@@ -27,16 +27,20 @@
 #include "ModelPersistence_if.h"
 
 // possible implementations
-#include "CollectorMyImpl1.h"
-#include "CollectorDatafileMyImpl1.h"
-#include "SamplerMyImpl1.h"
+//#include "CollectorMyImpl1.h"
+//#include "CollectorDatafileMyImpl1.h"
+#include "CollectorDanielBoso.h"
+#include "CollectorDatafileDanielBoso.h"
+//#include "SamplerMyImpl1.h"
+#include "SamplerDanielBoso.h"
 #include "FitterMyImpl1.h"
 #include "ModelCheckerMyImpl1.h"
 #include "ParserMyImpl1.h"
 #include "IntegratorMyImpl1.h"
 #include "HypothesisTesterMyImpl1.h"
 #include "ModelPersistenceMyImpl1.h"
-#include "StatisticsMyImpl1.h"
+//#include "StatisticsMyImpl1.h"
+#include "StatisticsDanielBoso.h"
 
 template <typename T>
 struct Traits {
@@ -48,12 +52,12 @@ template <> struct Traits<Model> {
 };
 
 template <> struct Traits<ModelComponent> {
-	typedef CollectorMyImpl1 CollectorImplementation;
+	typedef CollectorDanielBoso CollectorImplementation;
 };
 
 template <> struct Traits<Sampler_if> {
-	typedef SamplerMyImpl1 Implementation;
-	typedef SamplerMyImpl1::MyRNG_Parameters Parameters;
+	typedef SamplerDanielBoso Implementation;
+	typedef SamplerDanielBoso::MyRNG_Parameters Parameters;
 };
 
 template <> struct Traits<Fitter_if> {
@@ -61,8 +65,8 @@ template <> struct Traits<Fitter_if> {
 };
 
 template <> struct Traits<Collector_if> {
-	typedef CollectorDatafileMyImpl1 Implementation;
-	typedef CollectorMyImpl1 ModelImplementation; //TEMP
+	typedef CollectorDatafileDanielBoso Implementation;
+	typedef CollectorDanielBoso ModelImplementation; //TEMP
 };
 
 template <> struct Traits<ModelChecker_if> {
@@ -74,7 +78,7 @@ template <> struct Traits<Parser_if> {
 };
 
 template <> struct Traits<Statistics_if> {
-	typedef StatisticsMyImpl1 Implementation;
+	typedef StatisticsDanielBoso Implementation;
 };
 
 template <> struct Traits<Integrator_if> {

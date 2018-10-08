@@ -11,8 +11,8 @@ public:
 	StatisticsDanielBoso(const StatisticsDanielBoso& orig);
 	virtual ~StatisticsDanielBoso();
 public:
-	CollectorDatafileDanielBoso* getCollector();
-	void setCollector(CollectorDatafileDanielBoso* collector);
+	Collector_if* getCollector();
+	void setCollector(Collector_if* collector);
 public:
 	unsigned int numElements();
 	double min();
@@ -33,7 +33,7 @@ public:
 	double histogramClassLowerLimit(unsigned short classNum);
 	unsigned int histogramClassFrequency(unsigned short classNum);
 private:
-	CollectorDatafileDanielBoso* _collector = new CollectorDatafileDanielBoso();
+	Collector_if* _collector = new CollectorDatafileDanielBoso();
 	unsigned short _histogramNumClasses;
 
 };
