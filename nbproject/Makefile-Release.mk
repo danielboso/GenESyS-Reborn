@@ -37,6 +37,8 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 OBJECTFILES= \
 	${OBJECTDIR}/Assign.o \
 	${OBJECTDIR}/Attribute.o \
+	${OBJECTDIR}/BuildSimpleModel.o \
+	${OBJECTDIR}/CollectorDatafileCancianImpl.o \
 	${OBJECTDIR}/CollectorDatafileMyImpl1.o \
 	${OBJECTDIR}/CollectorMyImpl1.o \
 	${OBJECTDIR}/Create.o \
@@ -45,9 +47,13 @@ OBJECTFILES= \
 	${OBJECTDIR}/Entity.o \
 	${OBJECTDIR}/EntityType.o \
 	${OBJECTDIR}/Event.o \
+	${OBJECTDIR}/ExperimentDesign.o \
 	${OBJECTDIR}/FitterMyImpl1.o \
 	${OBJECTDIR}/HypothesisTesterMyImpl1.o \
+	${OBJECTDIR}/HypothesisTester_ar.o \
+	${OBJECTDIR}/IntegratorDiogoImpl.o \
 	${OBJECTDIR}/IntegratorMyImpl1.o \
+	${OBJECTDIR}/Integrator_ar.o \
 	${OBJECTDIR}/LinkedBy.o \
 	${OBJECTDIR}/Listener.o \
 	${OBJECTDIR}/Model.o \
@@ -62,12 +68,16 @@ OBJECTFILES= \
 	${OBJECTDIR}/Release.o \
 	${OBJECTDIR}/Resource.o \
 	${OBJECTDIR}/SamplerMyImpl1.o \
+	${OBJECTDIR}/Sampler_BruFabJoa.o \
 	${OBJECTDIR}/Seize.o \
+	${OBJECTDIR}/SimulationScenario.o \
 	${OBJECTDIR}/Simulator.o \
 	${OBJECTDIR}/SinkModelComponent.o \
 	${OBJECTDIR}/SourceModelComponent.o \
+	${OBJECTDIR}/StatisticsCancianImpl.o \
 	${OBJECTDIR}/StatisticsCollector.o \
 	${OBJECTDIR}/StatisticsMyImpl1.o \
+	${OBJECTDIR}/TestInputAnalyserTools.o \
 	${OBJECTDIR}/Util.o \
 	${OBJECTDIR}/Variable.o \
 	${OBJECTDIR}/Waiting.o \
@@ -109,6 +119,16 @@ ${OBJECTDIR}/Attribute.o: Attribute.cpp nbproject/Makefile-${CND_CONF}.mk
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Attribute.o Attribute.cpp
 
+${OBJECTDIR}/BuildSimpleModel.o: BuildSimpleModel.cpp nbproject/Makefile-${CND_CONF}.mk
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/BuildSimpleModel.o BuildSimpleModel.cpp
+
+${OBJECTDIR}/CollectorDatafileCancianImpl.o: CollectorDatafileCancianImpl.cpp nbproject/Makefile-${CND_CONF}.mk
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/CollectorDatafileCancianImpl.o CollectorDatafileCancianImpl.cpp
+
 ${OBJECTDIR}/CollectorDatafileMyImpl1.o: CollectorDatafileMyImpl1.cpp nbproject/Makefile-${CND_CONF}.mk
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
@@ -149,6 +169,11 @@ ${OBJECTDIR}/Event.o: Event.cpp nbproject/Makefile-${CND_CONF}.mk
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Event.o Event.cpp
 
+${OBJECTDIR}/ExperimentDesign.o: ExperimentDesign.cpp nbproject/Makefile-${CND_CONF}.mk
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ExperimentDesign.o ExperimentDesign.cpp
+
 ${OBJECTDIR}/FitterMyImpl1.o: FitterMyImpl1.cpp nbproject/Makefile-${CND_CONF}.mk
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
@@ -159,10 +184,25 @@ ${OBJECTDIR}/HypothesisTesterMyImpl1.o: HypothesisTesterMyImpl1.cpp nbproject/Ma
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/HypothesisTesterMyImpl1.o HypothesisTesterMyImpl1.cpp
 
+${OBJECTDIR}/HypothesisTester_ar.o: HypothesisTester_ar.cpp nbproject/Makefile-${CND_CONF}.mk
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/HypothesisTester_ar.o HypothesisTester_ar.cpp
+
+${OBJECTDIR}/IntegratorDiogoImpl.o: IntegratorDiogoImpl.cpp nbproject/Makefile-${CND_CONF}.mk
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/IntegratorDiogoImpl.o IntegratorDiogoImpl.cpp
+
 ${OBJECTDIR}/IntegratorMyImpl1.o: IntegratorMyImpl1.cpp nbproject/Makefile-${CND_CONF}.mk
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/IntegratorMyImpl1.o IntegratorMyImpl1.cpp
+
+${OBJECTDIR}/Integrator_ar.o: Integrator_ar.cpp nbproject/Makefile-${CND_CONF}.mk
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Integrator_ar.o Integrator_ar.cpp
 
 ${OBJECTDIR}/LinkedBy.o: LinkedBy.cpp nbproject/Makefile-${CND_CONF}.mk
 	${MKDIR} -p ${OBJECTDIR}
@@ -234,10 +274,20 @@ ${OBJECTDIR}/SamplerMyImpl1.o: SamplerMyImpl1.cpp nbproject/Makefile-${CND_CONF}
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/SamplerMyImpl1.o SamplerMyImpl1.cpp
 
+${OBJECTDIR}/Sampler_BruFabJoa.o: Sampler_BruFabJoa.cpp nbproject/Makefile-${CND_CONF}.mk
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Sampler_BruFabJoa.o Sampler_BruFabJoa.cpp
+
 ${OBJECTDIR}/Seize.o: Seize.cpp nbproject/Makefile-${CND_CONF}.mk
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Seize.o Seize.cpp
+
+${OBJECTDIR}/SimulationScenario.o: SimulationScenario.cpp nbproject/Makefile-${CND_CONF}.mk
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/SimulationScenario.o SimulationScenario.cpp
 
 ${OBJECTDIR}/Simulator.o: Simulator.cpp nbproject/Makefile-${CND_CONF}.mk
 	${MKDIR} -p ${OBJECTDIR}
@@ -254,6 +304,11 @@ ${OBJECTDIR}/SourceModelComponent.o: SourceModelComponent.cpp nbproject/Makefile
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/SourceModelComponent.o SourceModelComponent.cpp
 
+${OBJECTDIR}/StatisticsCancianImpl.o: StatisticsCancianImpl.cpp nbproject/Makefile-${CND_CONF}.mk
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/StatisticsCancianImpl.o StatisticsCancianImpl.cpp
+
 ${OBJECTDIR}/StatisticsCollector.o: StatisticsCollector.cpp nbproject/Makefile-${CND_CONF}.mk
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
@@ -263,6 +318,11 @@ ${OBJECTDIR}/StatisticsMyImpl1.o: StatisticsMyImpl1.cpp nbproject/Makefile-${CND
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/StatisticsMyImpl1.o StatisticsMyImpl1.cpp
+
+${OBJECTDIR}/TestInputAnalyserTools.o: TestInputAnalyserTools.cpp nbproject/Makefile-${CND_CONF}.mk
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/TestInputAnalyserTools.o TestInputAnalyserTools.cpp
 
 ${OBJECTDIR}/Util.o: Util.cpp nbproject/Makefile-${CND_CONF}.mk
 	${MKDIR} -p ${OBJECTDIR}
