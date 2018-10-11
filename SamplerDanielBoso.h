@@ -1,6 +1,13 @@
 #ifndef SAMPLERDANIELBOSO_H
 #define SAMPLERDANIELBOSO_H
 
+#include <cmath>
+#include <stdarg.h>
+#include <stdio.h>
+#include <iostream>
+#include <ctime>
+#include <random>
+
 #include "Sampler_if.h"
 
 class SamplerDanielBoso : public Sampler_if {
@@ -8,10 +15,11 @@ public:
 
 	class MyRNG_Parameters : public RNG_Parameters {
 	public:
-		unsigned int seed;
-		unsigned int module;
-		unsigned int multiplier;
+		unsigned int seed = 1000000000;
+		unsigned int module = 2147483647;
+		unsigned int multiplier = 950706376;
 	};
+
 public:
 	SamplerDanielBoso();
 	SamplerDanielBoso(const SamplerDanielBoso& orig);
@@ -27,12 +35,18 @@ public: // probability distributions
 	double sampleWeibull(double alpha, double scale);
 	double sampleLogNormal(double mean, double stddev);
 	double sampleTriangular(double min, double mode, double max);
-	double sampleDiscrete(int count, ...);
+	double sampleDiscrete(double value, double acumProb, ...);
+
 public:
 	void setRNGparameters(RNG_Parameters* param);
 	RNG_Parameters* getRNGparameters() const;
+
 private:
-	MyRNG_Parameters* _param = new MyRNG_Parameters();
+	double gammaJonk(double alpha);
+
+private:
+	RNG_Parameters* _param = new MyRNG_Parameters();
+	bool		  	_normalFlag	= true;
 };
 
 #endif /* SAMPLERDANIELBOSO_H */

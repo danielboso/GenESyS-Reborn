@@ -43,8 +43,8 @@
 #include "ModelPersistenceMyImpl1.h"
 #include "StatisticsMyImpl1.h"
 #include "StatisticsCancianImpl.h"
-#include "BuildSimpleModel1.h"
-//#include "testInputAnalyserTools.h"
+//#include "BuildSimpleModel1.h"
+#include "TestInputAnalyserTools.h"
 
 template <typename T>
 struct Traits {
@@ -53,8 +53,8 @@ struct Traits {
 };
 
 template <> struct Traits<GenesysApplication_if> {
-	//typedef TestInputAnalyserTool Application;  
-	typedef BuildSimpleModel Application;  
+	typedef TestInputAnalyserTools Application;  
+	//typedef BuildSimpleModel1 Application;  
 };
 
 template <> struct Traits<Model> {
@@ -109,4 +109,3 @@ template <> struct Traits<ModelPersistence_if> {
 };
 
 #endif /* TRAITS_H */
-

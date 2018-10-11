@@ -1,16 +1,11 @@
 
 #include "CollectorDatafileDanielBoso.h"
-#include <fstream>
 
-std::string     _filename;
-double          _lastValue;
-unsigned int    _numElements;
+CollectorDatafileDanielBoso::CollectorDatafileDanielBoso() { }
 
-CollectorDatafileDanielBoso::CollectorDatafileDanielBoso() {}
+CollectorDatafileDanielBoso::CollectorDatafileDanielBoso(const CollectorDatafileDanielBoso& orig) { }
 
-CollectorDatafileDanielBoso::CollectorDatafileDanielBoso(const CollectorDatafileDanielBoso& orig) {}
-
-CollectorDatafileDanielBoso::~CollectorDatafileDanielBoso() {}
+CollectorDatafileDanielBoso::~CollectorDatafileDanielBoso() { }
 
 void CollectorDatafileDanielBoso::clear() {
     std::ofstream ofstream;
@@ -23,7 +18,7 @@ void CollectorDatafileDanielBoso::addValue(double value) {
     std::ofstream ofstream;
 	ofstream.open(_filename);
 	ofstream << value << std::endl;
-	ofstream.close;
+	//ofstream.close;
 
     _lastValue = value;
     _numElements++;
@@ -33,7 +28,7 @@ double CollectorDatafileDanielBoso::getLastValue() {
     return _lastValue;
 }
 
-unsigned int CollectorDatafileDanielBoso::numElements() {
+unsigned long CollectorDatafileDanielBoso::numElements() {
     return _numElements;
 }
 

@@ -30,3 +30,6 @@
 *.exe
 *.out
 *.app
+/module1/nbproject/private/
+/build/
+/dist/

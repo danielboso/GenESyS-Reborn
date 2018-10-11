@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<configurationDescriptor version="100">
+<configurationDescriptor version="97">
   <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
     <logicalFolder name="HeaderFiles"
                    displayName="Arquivos de Cabeçalho"
@@ -55,8 +55,12 @@
     </logicalFolder>
     <logicalFolder name="f1" displayName="Kernel" projectFiles="true">
       <logicalFolder name="f2" displayName="Statistics" projectFiles="true">
+        <itemPath>CollectorDanielBoso.cpp</itemPath>
+        <itemPath>CollectorDanielBoso.h</itemPath>
         <itemPath>CollectorDatafileCancianImpl.cpp</itemPath>
         <itemPath>CollectorDatafileCancianImpl.h</itemPath>
+        <itemPath>CollectorDatafileDanielBoso.cpp</itemPath>
+        <itemPath>CollectorDatafileDanielBoso.h</itemPath>
         <itemPath>CollectorDatafileMyImpl1.cpp</itemPath>
         <itemPath>CollectorDatafileMyImpl1.h</itemPath>
         <itemPath>CollectorDatafile_if.h</itemPath>
@@ -79,6 +83,10 @@
         <itemPath>ProbDistrib.h</itemPath>
         <itemPath>StatisticsCancianImpl.cpp</itemPath>
         <itemPath>StatisticsCancianImpl.h</itemPath>
+        <itemPath>StatisticsCollectorDanielBoso.cpp</itemPath>
+        <itemPath>StatisticsCollectorDanielBoso.h</itemPath>
+        <itemPath>StatisticsDanielBoso.cpp</itemPath>
+        <itemPath>StatisticsDanielBoso.h</itemPath>
         <itemPath>StatisticsMyImpl1.cpp</itemPath>
         <itemPath>StatisticsMyImpl1.h</itemPath>
         <itemPath>Statistics_if.h</itemPath>
@@ -126,6 +134,8 @@
         <itemPath>FitterMyImpl1.cpp</itemPath>
         <itemPath>FitterMyImpl1.h</itemPath>
         <itemPath>Fitter_if.h</itemPath>
+        <itemPath>SamplerDanielBoso.cpp</itemPath>
+        <itemPath>SamplerDanielBoso.h</itemPath>
         <itemPath>SamplerMyImpl1.cpp</itemPath>
         <itemPath>SamplerMyImpl1.h</itemPath>
         <itemPath>Sampler_BruFabJoa.cpp</itemPath>
@@ -196,9 +206,17 @@
       </item>
       <item path="BuildSimpleModel1.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="CollectorDanielBoso.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CollectorDanielBoso.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="CollectorDatafileCancianImpl.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="CollectorDatafileCancianImpl.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CollectorDatafileDanielBoso.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CollectorDatafileDanielBoso.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="CollectorDatafileMyImpl1.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -332,6 +350,10 @@
       </item>
       <item path="Resource.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="SamplerDanielBoso.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SamplerDanielBoso.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="SamplerMyImpl1.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="SamplerMyImpl1.h" ex="false" tool="3" flavor2="0">
@@ -369,6 +391,14 @@
       <item path="StatisticsCollector.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="StatisticsCollector.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="StatisticsCollectorDanielBoso.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="StatisticsCollectorDanielBoso.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="StatisticsDanielBoso.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="StatisticsDanielBoso.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="StatisticsMyImpl1.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -433,9 +463,17 @@
       </item>
       <item path="BuildSimpleModel1.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="CollectorDanielBoso.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CollectorDanielBoso.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="CollectorDatafileCancianImpl.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="CollectorDatafileCancianImpl.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CollectorDatafileDanielBoso.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CollectorDatafileDanielBoso.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="CollectorDatafileMyImpl1.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -569,6 +607,10 @@
       </item>
       <item path="Resource.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="SamplerDanielBoso.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SamplerDanielBoso.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="SamplerMyImpl1.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="SamplerMyImpl1.h" ex="false" tool="3" flavor2="0">
@@ -606,6 +648,14 @@
       <item path="StatisticsCollector.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="StatisticsCollector.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="StatisticsCollectorDanielBoso.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="StatisticsCollectorDanielBoso.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="StatisticsDanielBoso.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="StatisticsDanielBoso.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="StatisticsMyImpl1.cpp" ex="false" tool="1" flavor2="0">
       </item>

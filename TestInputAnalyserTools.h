@@ -22,20 +22,19 @@ using namespace std;
 #include "Simulator.h"
 
 // Configuration
-#include "Traits.h"
+//#include "Traits.h"
 
 // Simulator tool objects
-#include "Sampler_if.h" // old MMC
-#include "Fitter_if.h"
+//#include "Sampler_if.h" // old MMC
+//#include "Fitter_if.h"
 
 // Tools and Utils
-//#include "Collector_if.h"
 //#include "CollectorDatafile_if.h"
-#include "HypothesisTester_if.h"
-#include "Integrator_if.h"
-#include "ProbDistrib.h"
-#include "Sampler_if.h"
-#include "Statistics_if.h"
+//#include "HypothesisTester_if.h"
+//#include "Integrator_if.h"
+//#include "ProbDistrib.h"
+//#include "Sampler_if.h"
+//#include "Statistics_if.h"
 
 class TestInputAnalyserTools : public GenesysApplication_if {
 public: 
@@ -45,4 +44,3 @@ public:
 };
 
 #endif /* TESTINPUTANALYSERTOOLS_H */
-

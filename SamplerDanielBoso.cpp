@@ -1,22 +1,17 @@
 
 #include "SamplerDanielBoso.h"
-#include <cmath>
-#include <stdarg.h>
-#include <stdio.h>
-#include <iostream>
-#include <ctime>
-#include <random>
-
-unsigned long _seed 		= 1000000000;
-unsigned long _multiplier 	=  950706376;
-unsigned long _module 		= 2147483647;
-bool		  _normalFlag	= true;
 
 struct ClassInformation{
 		double id;
 		double begin;
 		double end;
 };
+
+SamplerDanielBoso::SamplerDanielBoso() { }
+
+SamplerDanielBoso::SamplerDanielBoso(const SamplerDanielBoso& orig) { }
+
+SamplerDanielBoso::~SamplerDanielBoso() { }
 
 double SamplerDanielBoso::random() {
   	std::default_random_engine generator;
@@ -64,7 +59,7 @@ double SamplerDanielBoso::sampleNormal(double mean, double stddev) {
 
 }
 
-double gammaJonk(double alpha) {
+double SamplerDanielBoso::gammaJonk(double alpha) {
 	double r, r1, r2, x, y;
 
 	do {
@@ -159,7 +154,7 @@ double SamplerDanielBoso::sampleTriangular(double min, double mode, double max) 
 		return(max - sqrt(part2 * full * (1.0-r)));
 	}
 }
-
+/*
 double SamplerDanielBoso::sampleDiscrete(int count, ...) {
 	va_list numbers;
     va_start(numbers, count); 
@@ -191,12 +186,39 @@ double SamplerDanielBoso::sampleDiscrete(int count, ...) {
 		}
 	}
     va_end(numbers);
+} */
+
+double SamplerDanielBoso::sampleDiscrete(double value, double acumProb, ...)
+{
+    va_list args;
+    va_start(args, acumProb);
+
+    double lower_limits = 0;
+    double current_value = value;
+    double current_prob = acumProb;
+    double ran = random();
+
+    while (lower_limits <= 1)
+    {
+        if (ran >= lower_limits && ran < (lower_limits + current_prob))
+        {
+            va_end(args);
+            return current_value;
+        }
+
+        current_value = va_arg(args, double);
+        lower_limits += current_prob;
+        current_prob = va_arg(args, double);
+    }
+
+    va_end(args);
+    return 0;
 }
 
-void SamplerDanielBoso::setRNGparameters(Sampler_if::RNG_Parameters* param){
-	_param =  param;
+void SamplerDanielBoso::setRNGparameters(SamplerDanielBoso::RNG_Parameters* param){
+	this->_param = param;
 }
 
-Sampler_if::RNG_Parameters* SamplerDanielBoso::getRNGparameters() const {
-	return _param; 
+SamplerDanielBoso::RNG_Parameters* SamplerDanielBoso::getRNGparameters() const {
+	return this->_param; 
 }

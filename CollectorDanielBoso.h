@@ -14,7 +14,7 @@ public:
 	void clear();
 	void addValue(double value);
 	double getLastValue();
-	unsigned int numElements();
+	unsigned long numElements();
 
 private:
 	double _lastValue;
