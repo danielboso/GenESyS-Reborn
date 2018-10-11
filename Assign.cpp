@@ -11,10 +11,11 @@
  * Created on 31 de Agosto de 2018, 10:10
  */
 
-#include "Assign.h"
+#include <string>
 #include "Model.h"
-#include "Variable.h" // to avoid compile error: invalid use of incomplete type ‘class Model’
-//
+#include "Assign.h"
+#include "Variable.h"
+#include "Resource.h"
 
 Assign::Assign(Model* model) : ModelComponent(model) {
 	_name = "Assign " + std::to_string(Util::GenerateNewIdOfType<Assign>());
@@ -43,11 +44,10 @@ void Assign::_execute(Entity* entity) {
 		let = (*it);
 		double value = _model->parseExpression(let->getExpression());
 		_model->trace(Util::TraceLevel::TL_blockInternal, "Let \"" + let->getDestination() + "\" = " + std::to_string(value));
-		/* TODO: this is NOT the best way to do it */
+		/* TODO: this is NOT the best way to do it (enum comparision) */
 		if (let->getDestinationType() == DestinationType::Variable) {
-			/* TODO: WHY THERE IS AN ERROR IN THIS ?? */
-			//Variable* var = (Variable*) this->_model->getInfrastructure(Util::TypeOf<Variable>(), let->getDestination());
-			//var->setValue(value);
+			::Variable* myvar = (::Variable*) this->_model->getInfrastructure(Util::TypeOf<::Variable>(), let->getDestination());
+			myvar->setValue(value);
 		} else if (let->getDestinationType() == DestinationType::Attribute) {
 			entity->setAttributeValue(let->getDestination(), value);
 		}

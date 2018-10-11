@@ -37,7 +37,7 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 OBJECTFILES= \
 	${OBJECTDIR}/Assign.o \
 	${OBJECTDIR}/Attribute.o \
-	${OBJECTDIR}/BuildSimpleModel.o \
+	${OBJECTDIR}/BuildSimpleModel1.o \
 	${OBJECTDIR}/CollectorDatafileCancianImpl.o \
 	${OBJECTDIR}/CollectorDatafileMyImpl1.o \
 	${OBJECTDIR}/CollectorMyImpl1.o \
@@ -47,7 +47,8 @@ OBJECTFILES= \
 	${OBJECTDIR}/Entity.o \
 	${OBJECTDIR}/EntityType.o \
 	${OBJECTDIR}/Event.o \
-	${OBJECTDIR}/ExperimentDesign.o \
+	${OBJECTDIR}/ExperimentDesignMyImpl1.o \
+	${OBJECTDIR}/FactorOrInteractionContribution.o \
 	${OBJECTDIR}/FitterMyImpl1.o \
 	${OBJECTDIR}/HypothesisTesterMyImpl1.o \
 	${OBJECTDIR}/HypothesisTester_ar.o \
@@ -64,12 +65,15 @@ OBJECTFILES= \
 	${OBJECTDIR}/ParserMyImpl1.o \
 	${OBJECTDIR}/Plugin.o \
 	${OBJECTDIR}/ProbDistrib.o \
+	${OBJECTDIR}/ProcessAnalyserMyImpl1.o \
 	${OBJECTDIR}/Queue.o \
 	${OBJECTDIR}/Release.o \
 	${OBJECTDIR}/Resource.o \
 	${OBJECTDIR}/SamplerMyImpl1.o \
 	${OBJECTDIR}/Sampler_BruFabJoa.o \
 	${OBJECTDIR}/Seize.o \
+	${OBJECTDIR}/SimulationControl.o \
+	${OBJECTDIR}/SimulationResponse.o \
 	${OBJECTDIR}/SimulationScenario.o \
 	${OBJECTDIR}/Simulator.o \
 	${OBJECTDIR}/SinkModelComponent.o \
@@ -119,10 +123,10 @@ ${OBJECTDIR}/Attribute.o: Attribute.cpp nbproject/Makefile-${CND_CONF}.mk
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Attribute.o Attribute.cpp
 
-${OBJECTDIR}/BuildSimpleModel.o: BuildSimpleModel.cpp nbproject/Makefile-${CND_CONF}.mk
+${OBJECTDIR}/BuildSimpleModel1.o: BuildSimpleModel1.cpp nbproject/Makefile-${CND_CONF}.mk
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/BuildSimpleModel.o BuildSimpleModel.cpp
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/BuildSimpleModel1.o BuildSimpleModel1.cpp
 
 ${OBJECTDIR}/CollectorDatafileCancianImpl.o: CollectorDatafileCancianImpl.cpp nbproject/Makefile-${CND_CONF}.mk
 	${MKDIR} -p ${OBJECTDIR}
@@ -169,10 +173,15 @@ ${OBJECTDIR}/Event.o: Event.cpp nbproject/Makefile-${CND_CONF}.mk
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Event.o Event.cpp
 
-${OBJECTDIR}/ExperimentDesign.o: ExperimentDesign.cpp nbproject/Makefile-${CND_CONF}.mk
+${OBJECTDIR}/ExperimentDesignMyImpl1.o: ExperimentDesignMyImpl1.cpp nbproject/Makefile-${CND_CONF}.mk
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ExperimentDesign.o ExperimentDesign.cpp
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ExperimentDesignMyImpl1.o ExperimentDesignMyImpl1.cpp
+
+${OBJECTDIR}/FactorOrInteractionContribution.o: FactorOrInteractionContribution.cpp nbproject/Makefile-${CND_CONF}.mk
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/FactorOrInteractionContribution.o FactorOrInteractionContribution.cpp
 
 ${OBJECTDIR}/FitterMyImpl1.o: FitterMyImpl1.cpp nbproject/Makefile-${CND_CONF}.mk
 	${MKDIR} -p ${OBJECTDIR}
@@ -254,6 +263,11 @@ ${OBJECTDIR}/ProbDistrib.o: ProbDistrib.cpp nbproject/Makefile-${CND_CONF}.mk
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ProbDistrib.o ProbDistrib.cpp
 
+${OBJECTDIR}/ProcessAnalyserMyImpl1.o: ProcessAnalyserMyImpl1.cpp nbproject/Makefile-${CND_CONF}.mk
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ProcessAnalyserMyImpl1.o ProcessAnalyserMyImpl1.cpp
+
 ${OBJECTDIR}/Queue.o: Queue.cpp nbproject/Makefile-${CND_CONF}.mk
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
@@ -283,6 +297,16 @@ ${OBJECTDIR}/Seize.o: Seize.cpp nbproject/Makefile-${CND_CONF}.mk
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Seize.o Seize.cpp
+
+${OBJECTDIR}/SimulationControl.o: SimulationControl.cpp nbproject/Makefile-${CND_CONF}.mk
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/SimulationControl.o SimulationControl.cpp
+
+${OBJECTDIR}/SimulationResponse.o: SimulationResponse.cpp nbproject/Makefile-${CND_CONF}.mk
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/SimulationResponse.o SimulationResponse.cpp
 
 ${OBJECTDIR}/SimulationScenario.o: SimulationScenario.cpp nbproject/Makefile-${CND_CONF}.mk
 	${MKDIR} -p ${OBJECTDIR}
