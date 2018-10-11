@@ -21,6 +21,6 @@ double CollectorDanielBoso::getLastValue() {
 	return this->_lastValue;
 }
 
-unsigned int CollectorDanielBoso::numElements() {
+unsigned long CollectorDanielBoso::numElements() {
 	return this->_numElements;
 }

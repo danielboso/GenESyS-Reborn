@@ -1,15 +1,11 @@
 
-#include <math.h>
-#include <list>;
-
 #include "StatisticsDanielBoso.h"
-#include "fstream"
 
-StatisticsDanielBoso::StatisticsDanielBoso() {}
+StatisticsDanielBoso::StatisticsDanielBoso() { }
 
-StatisticsDanielBoso::StatisticsDanielBoso(const StatisticsDanielBoso& orig) {}
+StatisticsDanielBoso::StatisticsDanielBoso(const StatisticsDanielBoso& orig) { }
 
-StatisticsDanielBoso::~StatisticsDanielBoso() {}
+StatisticsDanielBoso::~StatisticsDanielBoso() { }
 
 unsigned int StatisticsDanielBoso::numElements() {
     _collector->numElements();
@@ -83,7 +79,7 @@ double StatisticsDanielBoso::mode() {
         listDoubles->push_back(std::stod(value));
     }
 
-    qsort(listDoubles, (size_t)listDoubles->size, sizeof(double), compare);
+    //qsort(listDoubles, (size_t)listDoubles->size, sizeof(double), compare);
 
     double modeValue = listDoubles->front();
     unsigned int numberValues = 1;
@@ -121,7 +117,7 @@ double StatisticsDanielBoso::mediane() {
         listDoubles->push_back(std::stod(value));
     }
 
-    qsort(listDoubles, (size_t)listDoubles->size, sizeof(double), compare);
+    //qsort(listDoubles, (size_t)listDoubles->size, sizeof(double), compare);
 
     std::list<double>::iterator it = listDoubles->begin();
 
@@ -168,17 +164,17 @@ unsigned int StatisticsDanielBoso::newSampleSize(double confidencelevel, double 
 
 double StatisticsDanielBoso::quartil(unsigned short num) {
     unsigned int position = 0.25 * (_collector->numElements() + 1);
-    return _collector->getValue(position);
+    return 0; //_collector->getValue(position));
 }
 
 double StatisticsDanielBoso::decil(unsigned short num) {
     unsigned int position = 0.1 * (_collector->numElements() + 1);
-    return _collector->getValue(position);
+    return 0; //_collector->getValue(position);
 }
 
 double StatisticsDanielBoso::centil(unsigned short num) {
     unsigned int position = 0.01 * (_collector->numElements() + 1);
-    return _collector->getValue(position);
+    return 0; //(CollectorDanielBoso*)_collector->getValue(position);
 }
 
 void StatisticsDanielBoso::setHistogramNumClasses(unsigned short num) {
@@ -206,7 +202,7 @@ double StatisticsDanielBoso::histogramClassLowerLimit(unsigned short classNum) {
 }
 
 unsigned int StatisticsDanielBoso::histogramClassFrequency(unsigned short classNum) {
-    double lowerLimitClass = StatisticsDanielBoso::histogramClassLowerLimit();
+    double lowerLimitClass = StatisticsDanielBoso::histogramClassLowerLimit(0);
     double upperLimitClass = lowerLimitClass + _histogramNumClasses;
     unsigned int frequency = 0;
 
@@ -221,7 +217,7 @@ unsigned int StatisticsDanielBoso::histogramClassFrequency(unsigned short classN
         listDoubles->push_back(std::stod(value));
     }
 
-    qsort(listDoubles, (size_t)listDoubles->size, sizeof(double), compare);
+    //qsort(listDoubles, (size_t)listDoubles->size, sizeof(double), compare);
 
     std::list<double>::iterator it = listDoubles->begin();
 
@@ -238,10 +234,10 @@ unsigned int StatisticsDanielBoso::histogramClassFrequency(unsigned short classN
     return frequency;
 }
 
-CollectorDatafileDanielBoso* StatisticsDanielBoso::getCollector() {
+Collector_if* StatisticsDanielBoso::getCollector() {
 	return this->_collector;
 }
 
-void StatisticsDanielBoso::setCollector(CollectorDatafileDanielBoso* collector) {
+void StatisticsDanielBoso::setCollector(Collector_if* collector) {
     _collector = collector;
 }

@@ -39,6 +39,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/Attribute.o \
 	${OBJECTDIR}/BuildSimpleModel1.o \
 	${OBJECTDIR}/CollectorDatafileCancianImpl.o \
+	${OBJECTDIR}/CollectorDatafileDanielBoso.o \
 	${OBJECTDIR}/CollectorDatafileMyImpl1.o \
 	${OBJECTDIR}/CollectorMyImpl1.o \
 	${OBJECTDIR}/Create.o \
@@ -69,6 +70,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/Queue.o \
 	${OBJECTDIR}/Release.o \
 	${OBJECTDIR}/Resource.o \
+	${OBJECTDIR}/SamplerDanielBoso.o \
 	${OBJECTDIR}/SamplerMyImpl1.o \
 	${OBJECTDIR}/Sampler_BruFabJoa.o \
 	${OBJECTDIR}/Seize.o \
@@ -80,6 +82,8 @@ OBJECTFILES= \
 	${OBJECTDIR}/SourceModelComponent.o \
 	${OBJECTDIR}/StatisticsCancianImpl.o \
 	${OBJECTDIR}/StatisticsCollector.o \
+	${OBJECTDIR}/StatisticsCollectorDanielBoso.o \
+	${OBJECTDIR}/StatisticsDanielBoso.o \
 	${OBJECTDIR}/StatisticsMyImpl1.o \
 	${OBJECTDIR}/TestInputAnalyserTools.o \
 	${OBJECTDIR}/Util.o \

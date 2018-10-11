@@ -122,4 +122,3 @@ template <> struct Traits<ProcessAnalyser_if> {
 };
 
 #endif /* TRAITS_H */
-

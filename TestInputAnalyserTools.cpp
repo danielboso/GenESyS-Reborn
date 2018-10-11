@@ -9,7 +9,7 @@
 #include "Sampler_if.h"
 #include "ProbDistrib.h"
 
-void testStudentSoftwareDevelopments() {
+void testStudentSoftwareDevelopments() {/*
 	Simulator* simulator = new Simulator();
 	Sampler_if* mmc = simulator->getSampler(); // Sampler is the new MMC
 	CollectorDatafile_if* collector = new Traits<Collector_if>::Implementation();
@@ -78,7 +78,7 @@ void testStudentSoftwareDevelopments() {
 	res = tester->testAverage(0.95, 5100, HypothesisTester_if::DIFFERENT);
 	res = tester->testVariance(0.95, 350 * 350, HypothesisTester_if::EQUAL);
 	res = tester->testVariance(0.95, 350 * 350, HypothesisTester_if::LESS_THAN);
-
+*/
 }
 
 TestInputAnalyserTools::TestInputAnalyserTools() {

@@ -26,4 +26,3 @@ public:
 };
 
 #endif /* TESTINPUTANALYSERTOOLS_H */
-
