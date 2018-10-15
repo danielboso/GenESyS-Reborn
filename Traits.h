@@ -30,11 +30,12 @@
 #include "ExperimentDesign_if.h"
 
 // possible implementations
-#include "CollectorMyImpl1.h"
-#include "CollectorDatafileMyImpl1.h"
-#include "CollectorDatafileCancianImpl.h"
-#include "SamplerMyImpl1.h"
-#include "Sampler_BruFabJoa.h"
+//#include "CollectorMyImpl1.h"
+//#include "CollectorDatafileMyImpl1.h"
+#include "CollectorDanielBoso.h"
+#include "CollectorDatafileDanielBoso.h"
+//#include "SamplerMyImpl1.h"
+#include "SamplerDanielBoso.h"
 #include "FitterMyImpl1.h"
 #include "ModelCheckerMyImpl1.h"
 #include "ParserMyImpl1.h"
@@ -45,6 +46,7 @@
 #include "ModelPersistenceMyImpl1.h"
 #include "StatisticsMyImpl1.h"
 #include "StatisticsCancianImpl.h"
+#include "StatisticsDanielBoso.h"
 #include "BuildSimpleModel1.h"
 #include "TestInputAnalyserTools.h"
 #include "ProcessAnalyserMyImpl1.h"
@@ -65,14 +67,12 @@ template <> struct Traits<Model> {
 };
 
 template <> struct Traits<ModelComponent> {
-	typedef CollectorMyImpl1 CollectorImplementation;
+	typedef CollectorDanielBoso CollectorImplementation;
 };
 
 template <> struct Traits<Sampler_if> {
-	//typedef SamplerMyImpl1 Implementation;
-	//typedef SamplerMyImpl1::MyRNG_Parameters Parameters;
-	typedef Sampler_BruFabJoa Implementation;
-	typedef Sampler_BruFabJoa::MyRNG_Parameters Parameters;
+	typedef SamplerDanielBoso Implementation;
+	typedef SamplerDanielBoso::MyRNG_Parameters Parameters;
 };
 
 template <> struct Traits<Fitter_if> {
@@ -80,9 +80,8 @@ template <> struct Traits<Fitter_if> {
 };
 
 template <> struct Traits<Collector_if> {
-	//typedef CollectorDatafileMyImpl1 Implementation;
-	typedef CollectorMyImpl1 ModelImplementation; //TEMP
-	typedef CollectorDatafileCancianImpl Implementation;
+	typedef CollectorDatafileDanielBoso Implementation;
+	typedef CollectorDanielBoso ModelImplementation; //TEMP
 };
 
 template <> struct Traits<ModelChecker_if> {
@@ -94,8 +93,7 @@ template <> struct Traits<Parser_if> {
 };
 
 template <> struct Traits<Statistics_if> {
-	//typedef StatisticsMyImpl1 Implementation;
-	typedef StatisticsCancianImpl Implementation;
+	typedef StatisticsDanielBoso Implementation;
 };
 
 template <> struct Traits<Integrator_if> {
