@@ -30,3 +30,7 @@ ProcessAnalyser_if* ExperimentDesignMyImpl1::getProcessAnalyser() const {
 	return _processAnalyser;
 }
 
+bool ExperimentDesignMyImpl1::generate2krScenarioExperiments() {}
+
+bool ExperimentDesignMyImpl1::calculateContributionAndCoefficients() {}
+
