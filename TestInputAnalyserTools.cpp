@@ -9,7 +9,7 @@
 #include "Sampler_if.h"
 #include "ProbDistrib.h"
 
-void testStudentSoftwareDevelopments() {/*
+void testStudentSoftwareDevelopments() {
 	Simulator* simulator = new Simulator();
 	Sampler_if* mmc = simulator->getSampler(); // Sampler is the new MMC
 	CollectorDatafile_if* collector = new Traits<Collector_if>::Implementation();
@@ -33,11 +33,12 @@ void testStudentSoftwareDevelopments() {/*
 	statistics->setCollector(collector); //setDataFilename(collector->getDataFilename());
 	double statVal;
 	statVal = statistics->numElements();
-	statVal = statistics->average();
+	statVal = statistics->average(); /*
 	statVal = statistics->stddeviation();
 	statVal = statistics->halfWidthConfidenceInterval(0.05);
 	statVal = statistics->quartil(2);
 	statVal = statistics->mediane();
+        
 	unsigned int numclasses = statistics->histogramNumClasses();
 	for (unsigned int i = 0; i < numclasses; i++) {
 		statVal = statistics->histogramClassFrequency(i);
@@ -78,13 +79,14 @@ void testStudentSoftwareDevelopments() {/*
 	res = tester->testAverage(0.95, 5100, HypothesisTester_if::DIFFERENT);
 	res = tester->testVariance(0.95, 350 * 350, HypothesisTester_if::EQUAL);
 	res = tester->testVariance(0.95, 350 * 350, HypothesisTester_if::LESS_THAN);
-*/
-}
+
+ */}
 
 TestInputAnalyserTools::TestInputAnalyserTools() {
 
 }
 
 int TestInputAnalyserTools::main(int argc, char** argv) {
+    std::cout << "a";
 	testStudentSoftwareDevelopments();
 };
