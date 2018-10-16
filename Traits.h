@@ -30,24 +30,20 @@
 //#include "ExperimentDesign_if.h"
 
 // possible implementations
-//#include "CollectorMyImpl1.h"
-//#include "CollectorDatafileMyImpl1.h"
 #include "CollectorDanielBoso.h"
 #include "CollectorDatafileDanielBoso.h"
-//#include "SamplerMyImpl1.h"
 #include "SamplerDanielBoso.h"
 #include "FitterMyImpl1.h"
 #include "ModelCheckerMyImpl1.h"
 #include "ParserMyImpl1.h"
 #include "IntegratorMyImpl1.h"
 #include "IntegratorDiogoImpl.h"
-#include "HypothesisTesterMyImpl1.h"
-//#include "HypothesisTesterDiogo.h"
+#include "HypothesisTesterDiogo.h"
 #include "ModelPersistenceMyImpl1.h"
-//#include "StatisticsMyImpl1.h"
-//#include "StatisticsCancianImpl.h"
 #include "StatisticsDanielBoso.h"
 //#include "BuildSimpleModel1.h"
+#include "ModelChecker_DS2Karla.h"
+#include "BuildSimpleModel1.h"
 #include "TestInputAnalyserTools.h"
 //#include "ProcessAnalyserMyImpl1.h"
 //#include "ExperimentDesignMyImpl1.h"
@@ -59,8 +55,8 @@ struct Traits {
 };
 
 template <> struct Traits<GenesysApplication_if> {
-	typedef TestInputAnalyserTools Application;  
-	//typedef BuildSimpleModel1 Application;  
+	//typedef TestInputAnalyserTools Application;  
+	typedef BuildSimpleModel1 Application;  
 };
 
 template <> struct Traits<Model> {
@@ -85,7 +81,7 @@ template <> struct Traits<Collector_if> {
 };
 
 template <> struct Traits<ModelChecker_if> {
-	typedef ModelCheckerMyImpl1 Implementation;
+	typedef ModelChecker_DS2Karla Implementation;
 };
 
 template <> struct Traits<Parser_if> {

@@ -46,8 +46,8 @@
             <file>file:/home/cancian/Laboratory/Software_Lab/IA32_Architecture/GccProjects/RebornedGenESyS/RebornedGenESyS/buildSimpleModel1.h</file>
         </group>
         <group>
-            <file>file:/home/daniel/UFSC/GenESyS-Reborn/StatisticsCollectorDanielBoso.h</file>
-            <file>file:/home/daniel/UFSC/GenESyS-Reborn/Traits.h</file>
+            <file>file:/home/daniel/UFSC/GenESyS-Reborn/StatisticsDanielBoso.cpp</file>
+            <file>file:/home/daniel/UFSC/GenESyS-Reborn/FactorOrInteractionContribution.h</file>
         </group>
     </open-files>
 </project-private>
