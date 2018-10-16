@@ -46,7 +46,7 @@ private:
 
 private:
 	RNG_Parameters* _param = new MyRNG_Parameters();
-	bool		  	_normalFlag	= true;
+	bool		_normalFlag = true;
 };
 
 #endif /* SAMPLERDANIELBOSO_H */

@@ -45,7 +45,8 @@ double calculate_average(double averageBefore, double nextNumber, int n) {
 
 double StatisticsDanielBoso::average() {
     std::ifstream ifstream;
-    //ifstream.open();
+    //CollectorDatafile_if* collector = _collector;
+    ifstream.open(((CollectorDatafile_if*)_collector)->getDataFilename(), std::ios::out | std::ios::app);
     std::string value;
     std::getline(ifstream, value);
     int n = 1;
