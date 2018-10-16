@@ -26,8 +26,8 @@
 #include "HypothesisTester_if.h"
 #include "ModelPersistence_if.h"
 #include "GenesysApplication_if.h"
-#include "ProcessAnalyser_if.h"
-#include "ExperimentDesign_if.h"
+//#include "ProcessAnalyser_if.h"
+//#include "ExperimentDesign_if.h"
 
 // possible implementations
 //#include "CollectorMyImpl1.h"
@@ -44,13 +44,13 @@
 #include "HypothesisTesterMyImpl1.h"
 //#include "HypothesisTesterDiogo.h"
 #include "ModelPersistenceMyImpl1.h"
-#include "StatisticsMyImpl1.h"
-#include "StatisticsCancianImpl.h"
+//#include "StatisticsMyImpl1.h"
+//#include "StatisticsCancianImpl.h"
 #include "StatisticsDanielBoso.h"
-#include "BuildSimpleModel1.h"
+//#include "BuildSimpleModel1.h"
 #include "TestInputAnalyserTools.h"
-#include "ProcessAnalyserMyImpl1.h"
-#include "ExperimentDesignMyImpl1.h"
+//#include "ProcessAnalyserMyImpl1.h"
+//#include "ExperimentDesignMyImpl1.h"
 
 template <typename T>
 struct Traits {
@@ -110,13 +110,13 @@ template <> struct Traits<ModelPersistence_if> {
 	typedef ModelPersistenceMyImpl1 Implementation;
 };
 
-template <> struct Traits<ExperimentDesign_if> {
-	typedef ExperimentDesignMyImpl1 Implementation;
+//template <> struct Traits<ExperimentDesign_if> {
+//	typedef ExperimentDesignMyImpl1 Implementation;
 	//typedef ProcessAnalyserMyImpl1 ProcessAnalyserImplementation;
-};
+//};
 
-template <> struct Traits<ProcessAnalyser_if> {
-	typedef ProcessAnalyserMyImpl1 Implementation;
-};
+//template <> struct Traits<ProcessAnalyser_if> {
+//	typedef ProcessAnalyserMyImpl1 Implementation;
+//};
 
 #endif /* TRAITS_H */
