@@ -8,7 +8,7 @@
  * File:   SamplerDanielBoso.cpp
  * Author: Daniel Boso
  *
- * Created on 18 de Outubro de 2018, 09:23
+ * Created on October 18, 2018 at 09:23
  */
 
 #include <stdio.h>

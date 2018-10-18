@@ -8,7 +8,7 @@
  * File:   SamplerDanielBoso.h
  * Author: Daniel Boso
  * 
- * Created on 18 de Outubro de 2018, 09:22
+ * Created on October 18, 2018 at 09:22
  */
 
 #ifndef SAMPLERDANIELBOSO_H
