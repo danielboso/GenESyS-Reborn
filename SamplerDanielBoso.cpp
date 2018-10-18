@@ -41,7 +41,7 @@ double SamplerDanielBoso::sampleErlang(double mean, int M) {
         p *= random();
     }
 
-    return ((mean/M) * (-log(p)));
+    return ((mean / M) * (-log(p)));
 }
 
 double SamplerDanielBoso::sampleNormal(double mean, double stddev) {
@@ -54,8 +54,8 @@ double SamplerDanielBoso::sampleNormal(double mean, double stddev) {
     if(_normalFlag) {
             
         do {
-            u1 = 2 * SamplerDanielBoso::random() - 1.0;
-            u2 = (2 * random()) - 1.0;
+            u1 = 2 * random() - 1.0;
+            u2 = 2 * random() - 1.0;
             w  = u1 * u1 + u2 * u2;
         } while(w >= 1.0);
 

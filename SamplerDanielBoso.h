@@ -28,9 +28,9 @@ public:
 
     class MyRNG_Parameters : public RNG_Parameters {
     public:
-            unsigned int seed = 1000000000;
-            unsigned int module = 2147483647;
-            unsigned int multiplier = 950706376;
+        unsigned int seed = 1000000000;
+        unsigned int module = 2147483647;
+        unsigned int multiplier = 950706376;
     };
 
 public:
